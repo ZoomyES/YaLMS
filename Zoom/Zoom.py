@@ -4,7 +4,7 @@ if __name__ == "__main__":
     pygame.init()
     screen = pygame.display.set_mode((501, 501))
     pygame.display.set_caption('Zoom')
-    file = open('data/points.txt', encoding='utf8')
+    file = open('points.txt', encoding='utf8')
     points = [(float(i.split(';')[0][1:].replace(',', '.')), -float(i.split(';')[1][:-1].replace(',', '.'))) for i in file.readlines()[0].split(', ')]
     k = 8
     running = True
